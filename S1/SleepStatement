@@ -1,0 +1,59 @@
+package model.statements;
+
+
+import exceptions.StatementException;
+import model.adt.IMyDictionary;
+import model.adt.IMyStack;
+import model.states.PrgState;
+import model.types.IType;
+import model.types.IntIType;
+
+public class SleepStatement implements IStmt {
+  private final int number;
+
+  public SleepStatement(int number) {
+    this.number = number;
+  }
+
+  @Override
+  public PrgState execute(PrgState state) throws StatementException {
+    if (number > 0) {
+      IMyStack<IStmt> exeStack = state.getExeStack();
+      exeStack.push(new SleepStatement(number - 1)); // Push sleep(number - 1) onto the stack
+    }
+    return null;
+  }
+
+  @Override
+  public IMyDictionary<String, IType> typeCheck(IMyDictionary<String, IType> typeEnv) throws StatementException {
+    return typeEnv;
+  }
+
+  @Override
+  public IStmt deepCopy() {
+    return new SleepStatement(number);
+  }
+
+  @Override
+  public String toString() {
+    return String.format("sleep(%d)", number);
+  }
+}
+
+
+//----------------------------------------------------------------
+
+IStmt statement12 = new CompStmt(
+        new VariablesDeclarationStmt("v", new IntIType()), // int v;
+        new CompStmt(
+                new AssignStmt("v", new ValueExpression(new IntIValue(10))), // v = 10;
+                new CompStmt(
+                        new SleepStatement(3), // sleep(3);
+                        new PrintStm(new VariableExpression("v")) // print(v);
+                )
+        )
+);
+
+IRepository repo12 = new Repository("SleepStatement.txt");
+Controller controller12 = new Controller(repo12);
+controller12.addProgram(statement12);
