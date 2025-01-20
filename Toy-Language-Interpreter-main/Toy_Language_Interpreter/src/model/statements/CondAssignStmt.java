@@ -1,0 +1,69 @@
+package model.statements;
+
+import exceptions.ADTException;
+import exceptions.StatementException;
+import model.adt.IMyDictionary;
+import model.adt.IMyStack;
+import model.expressions.IExp;
+import model.states.PrgState;
+import model.types.BoolIType;
+import model.types.IType;
+
+import java.io.IOException;
+
+public class CondAssignStmt implements IStmt {
+  String variable;
+  IExp exp1, exp2, exp3;
+
+  public CondAssignStmt(String variable, IExp exp1, IExp exp2, IExp exp3) {
+    this.variable = variable;
+    this.exp1 = exp1;
+    this.exp2 = exp2;
+    this.exp3 = exp3;
+  }
+
+  @Override
+  public PrgState execute(PrgState prgState) throws StatementException, ADTException, IOException {
+    IMyStack<IStmt> exeStack = prgState.getExeStack();
+
+    IStmt newStmt = new IfStmt(exp1,
+            new AssignStmt(variable, exp2),
+            new AssignStmt(variable, exp3)
+    );
+
+    exeStack.push(newStmt);
+    return null;
+  }
+
+  @Override
+  public IStmt deepCopy() {
+    return null;
+  }
+
+  @Override
+  public IMyDictionary<String, IType> typeCheck(IMyDictionary<String, IType> typeEnv) throws StatementException {
+    IType exp1Type = exp1.typecheck(typeEnv);
+    if(!exp1Type.equals(new BoolIType())) {
+      throw new StatementException("Conditional Assignment Statement EXCEPTION: Exp1 must be of type BoolIType");
+    }
+
+    IType exp2Type = exp2.typecheck(typeEnv);
+    IType exp3Type = exp3.typecheck(typeEnv);
+    IType vType = typeEnv.getValue(variable);
+
+    if(!vType.equals(exp2Type)) {
+      throw new StatementException("Conditional Assignment Statement EXCEPTION: Exp2 must of the same type as the variable");
+    }
+
+    if(!vType.equals(exp3Type)) {
+      throw new StatementException("Conditional Assignment Statement EXCEPTION: Exp3 must of the same type as the variable");
+    }
+
+    return typeEnv;
+  }
+
+  @Override
+  public String toString() {
+    return String.format("%s = %s ? %s : %s", variable, exp1, exp2, exp3);
+  }
+}

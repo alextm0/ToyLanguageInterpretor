@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d56a402e-05f9-4d31-878d-f787a64e554f" name="Changes" comment="fixed the symtable">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toy_Language_Interpreter/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Toy_Language_Interpreter/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toy_Language_Interpreter/src/view/gui/executewindow/ExecuteStatementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Toy_Language_Interpreter/src/view/gui/executewindow/ExecuteStatementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toy_Language_Interpreter/src/view/gui/selectwindow/SelectStatementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Toy_Language_Interpreter/src/view/gui/selectwindow/SelectStatementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/Toy_Language_Interpreter/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/Toy_Language_Interpreter/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/Toy_Language_Interpreter/view/gui/executewindow/ExecuteStatementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/Toy_Language_Interpreter/view/gui/executewindow/ExecuteStatementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/Toy_Language_Interpreter/view/gui/selectwindow/SelectStatementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/Toy_Language_Interpreter/view/gui/selectwindow/SelectStatementController.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Exception" />
+        <option value="module-info" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Andreea410&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Andreea410/Toy-Language-Interpreter.git&quot;,
+    &quot;accountId&quot;: &quot;3ba05155-836e-4308-82d8-c5dc22cb6744&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Toy_Language_Interpreter/src/model/expressions/LogicalExpression.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2nRR9Jr0xPPNOvbas3rvY5QZN09" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloWorldFX.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Interpreter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/New folder&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/CS-UBB/SEMESTRUL 3/MAP/ASSIGNMENTS/Toy-Language-Interpreter/Toy_Language_Interpreter/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\CS-UBB\SEMESTRUL 3\MAP\ASSIGNMENTS\Toy-Language-Interpreter\Toy_Language_Interpreter\src\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\CS-UBB\SEMESTRUL 3\MAP\ASSIGNMENTS\Toy-Language-Interpreter\Toy_Language_Interpreter\src\view\gui\selectwindow" />
+      <recent name="E:\CS-UBB\SEMESTRUL 3\MAP\ASSIGNMENTS\Toy-Language-Interpreter\Toy_Language_Interpreter\src" />
+      <recent name="E:\CS-UBB\SEMESTRUL 3\MAP\ASSIGNMENTS\Toy-Language-Interpreter\Toy_Language_Interpreter\src\view\gui" />
+      <recent name="E:\CS-UBB\SEMESTRUL 3\MAP\ASSIGNMENTS\Toy-Language-Interpreter\Toy_Language_Interpreter" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="model.types" />
+      <recent name="model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Toy_Language_Interpreter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.24807.4" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.24807.4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d56a402e-05f9-4d31-878d-f787a64e554f" name="Changes" comment="" />
+      <created>1728933748688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728933748688</updated>
+      <workItem from="1728933749794" duration="1273000" />
+      <workItem from="1728984773765" duration="605000" />
+      <workItem from="1728985459068" duration="10161000" />
+      <workItem from="1729005133035" duration="4939000" />
+      <workItem from="1729073927222" duration="145000" />
+      <workItem from="1729085142403" duration="827000" />
+      <workItem from="1729457411914" duration="30000" />
+      <workItem from="1729508593300" duration="620000" />
+      <workItem from="1729515702926" duration="200000" />
+      <workItem from="1729584450690" duration="2650000" />
+      <workItem from="1729609820713" duration="4857000" />
+      <workItem from="1729695655675" duration="997000" />
+      <workItem from="1729767642030" duration="6742000" />
+      <workItem from="1729780726966" duration="2573000" />
+      <workItem from="1730059441488" duration="1020000" />
+      <workItem from="1730060491257" duration="4207000" />
+      <workItem from="1730113364252" duration="3732000" />
+      <workItem from="1730117929314" duration="316000" />
+      <workItem from="1730124073258" duration="281000" />
+      <workItem from="1730126118435" duration="2404000" />
+      <workItem from="1730204660691" duration="11761000" />
+      <workItem from="1730644228297" duration="4509000" />
+      <workItem from="1730658197622" duration="18000" />
+      <workItem from="1730676501758" duration="1415000" />
+      <workItem from="1730711258445" duration="630000" />
+      <workItem from="1730721760555" duration="1910000" />
+      <workItem from="1730823483753" duration="3284000" />
+      <workItem from="1730840996299" duration="1291000" />
+      <workItem from="1731167167489" duration="8478000" />
+      <workItem from="1731322608729" duration="2315000" />
+      <workItem from="1731326478346" duration="1541000" />
+      <workItem from="1731519234765" duration="194000" />
+      <workItem from="1732032801404" duration="142000" />
+      <workItem from="1732033450485" duration="88000" />
+      <workItem from="1732034223739" duration="3332000" />
+      <workItem from="1732200034116" duration="1207000" />
+      <workItem from="1732374105203" duration="9135000" />
+      <workItem from="1732388137896" duration="2113000" />
+      <workItem from="1732445808767" duration="4886000" />
+      <workItem from="1732459871597" duration="3991000" />
+      <workItem from="1732482810916" duration="1697000" />
+      <workItem from="1732529760705" duration="1823000" />
+      <workItem from="1732536222705" duration="2610000" />
+      <workItem from="1732638099149" duration="4101000" />
+      <workItem from="1732694799138" duration="3198000" />
+      <workItem from="1732699962001" duration="322000" />
+      <workItem from="1732728082734" duration="3846000" />
+      <workItem from="1732820231688" duration="7638000" />
+      <workItem from="1732894252144" duration="10349000" />
+      <workItem from="1732960491729" duration="13679000" />
+      <workItem from="1732998492719" duration="1475000" />
+      <workItem from="1733000085702" duration="290000" />
+      <workItem from="1733053641266" duration="6125000" />
+      <workItem from="1733133918928" duration="8077000" />
+      <workItem from="1733160893445" duration="36000" />
+      <workItem from="1733746457082" duration="3427000" />
+      <workItem from="1734348241578" duration="817000" />
+      <workItem from="1734349585430" duration="387000" />
+      <workItem from="1734350292463" duration="944000" />
+      <workItem from="1734361639895" duration="529000" />
+      <workItem from="1734379904437" duration="577000" />
+      <workItem from="1734464646559" duration="246000" />
+      <workItem from="1734464925452" duration="1632000" />
+      <workItem from="1734738457497" duration="3822000" />
+      <workItem from="1734794185919" duration="4291000" />
+      <workItem from="1734805721566" duration="2622000" />
+      <workItem from="1734808481144" duration="2719000" />
+    </task>
+    <task id="LOCAL-00055" summary="finished A4">
+      <option name="closed" value="true" />
+      <created>1732484361338</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1732484361338</updated>
+    </task>
+    <task id="LOCAL-00056" summary="seminar 9">
+      <option name="closed" value="true" />
+      <created>1732642111964</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1732642111964</updated>
+    </task>
+    <task id="LOCAL-00057" summary="added the new functions in the Repository">
+      <option name="closed" value="true" />
+      <created>1732696475486</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1732696475486</updated>
+    </task>
+    <task id="LOCAL-00058" summary="implemented the oneStepForAllPrg in the controller and fixed the fork statement">
+      <option name="closed" value="true" />
+      <created>1732698291360</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1732698291360</updated>
+    </task>
+    <task id="LOCAL-00059" summary="added some new functions">
+      <option name="closed" value="true" />
+      <created>1732699096792</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1732699096792</updated>
+    </task>
+    <task id="LOCAL-00060" summary="changed the function AllStep to throw the exception so I can catch it in Interpreter">
+      <option name="closed" value="true" />
+      <created>1732729370876</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1732729370876</updated>
+    </task>
+    <task id="LOCAL-00061" summary="removed the ExecutorService from Controller constructor">
+      <option name="closed" value="true" />
+      <created>1732729567865</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1732729567865</updated>
+    </task>
+    <task id="LOCAL-00062" summary="fixed the command such that it will call the function allStep instead of executeAllSteps">
+      <option name="closed" value="true" />
+      <created>1732729833690</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1732729833690</updated>
+    </task>
+    <task id="LOCAL-00063" summary="added a new exception which send to the textMenu a new exception and signals that an error has occured">
+      <option name="closed" value="true" />
+      <created>1732730300332</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1732730300332</updated>
+    </task>
+    <task id="LOCAL-00064" summary="changed the function OneStep to return the ProgramStates instead of boolean">
+      <option name="closed" value="true" />
+      <created>1732731656927</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1732731656927</updated>
+    </task>
+    <task id="LOCAL-00065" summary="fixed the error in the controller">
+      <option name="closed" value="true" />
+      <created>1732823408993</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1732823408993</updated>
+    </task>
+    <task id="LOCAL-00066" summary="updated the function deepCopy from my dictionary">
+      <option name="closed" value="true" />
+      <created>1732877604555</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1732877604558</updated>
+    </task>
+    <task id="LOCAL-00067" summary="trying to fix an error">
+      <option name="closed" value="true" />
+      <created>1732889197201</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1732889197201</updated>
+    </task>
+    <task id="LOCAL-00068" summary="implemented the ConvservativeGarbageCollector">
+      <option name="closed" value="true" />
+      <created>1732894573890</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1732894573892</updated>
+    </task>
+    <task id="LOCAL-00069" summary="trying to find we the stack gets empty and the execution doesn t stop.Meanwhile cleared the file before writting in it">
+      <option name="closed" value="true" />
+      <created>1732896231439</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1732896231439</updated>
+    </task>
+    <task id="LOCAL-00070" summary="fixed the empty stack exception">
+      <option name="closed" value="true" />
+      <created>1732897927356</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1732897927356</updated>
+    </task>
+    <task id="LOCAL-00071" summary="almost finished A5">
+      <option name="closed" value="true" />
+      <created>1732904097456</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1732904097456</updated>
+    </task>
+    <task id="LOCAL-00072" summary="A5">
+      <option name="closed" value="true" />
+      <created>1732904778845</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1732904778845</updated>
+    </task>
+    <task id="LOCAL-00073" summary="finished A5">
+      <option name="closed" value="true" />
+      <created>1732961792536</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1732961792536</updated>
+    </task>
+    <task id="LOCAL-00074" summary="found another error,trying to fix it">
+      <option name="closed" value="true" />
+      <created>1732993585742</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1732993585742</updated>
+    </task>
+    <task id="LOCAL-00075" summary="syncronized the heap">
+      <option name="closed" value="true" />
+      <created>1732996365909</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1732996365909</updated>
+    </task>
+    <task id="LOCAL-00076" summary="FINISHED A5">
+      <option name="closed" value="true" />
+      <created>1732999458445</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1732999458445</updated>
+    </task>
+    <task id="LOCAL-00077" summary="FINISHED A5">
+      <option name="closed" value="true" />
+      <created>1732999945083</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1732999945083</updated>
+    </task>
+    <task id="LOCAL-00078" summary="started A6 , implemented the typecheck method for all expressions">
+      <option name="closed" value="true" />
+      <created>1733055197407</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1733055197407</updated>
+    </task>
+    <task id="LOCAL-00079" summary="implemented the typeCheck method for all statements">
+      <option name="closed" value="true" />
+      <created>1733061661290</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1733061661290</updated>
+    </task>
+    <task id="LOCAL-00080" summary="finished A6">
+      <option name="closed" value="true" />
+      <created>1733062872209</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1733062872209</updated>
+    </task>
+    <task id="LOCAL-00081" summary="finished A6">
+      <option name="closed" value="true" />
+      <created>1733063988648</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1733063988648</updated>
+    </task>
+    <task id="LOCAL-00082" summary="added javaFx module-info.java">
+      <option name="closed" value="true" />
+      <created>1734465219620</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1734465219621</updated>
+    </task>
+    <task id="LOCAL-00083" summary="deleted some implementations and started over">
+      <option name="closed" value="true" />
+      <created>1734716506648</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1734716506649</updated>
+    </task>
+    <task id="LOCAL-00084" summary="deleted some implementations and started over">
+      <option name="closed" value="true" />
+      <created>1734722039019</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1734722039019</updated>
+    </task>
+    <task id="LOCAL-00085" summary="implemented the ExecuteStatementWindow.fxml">
+      <option name="closed" value="true" />
+      <created>1734723613059</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1734723613059</updated>
+    </task>
+    <task id="LOCAL-00086" summary="implemented the ExecuteStatementWindow.fxml">
+      <option name="closed" value="true" />
+      <created>1734723783215</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1734723783215</updated>
+    </task>
+    <task id="LOCAL-00087" summary="implement the get current program state">
+      <option name="closed" value="true" />
+      <created>1734724377660</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1734724377660</updated>
+    </task>
+    <task id="LOCAL-00088" summary="added the ADT MyPair">
+      <option name="closed" value="true" />
+      <created>1734724523392</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1734724523392</updated>
+    </task>
+    <task id="LOCAL-00089" summary="implement the getStack function in Stack ADT">
+      <option name="closed" value="true" />
+      <created>1734724842291</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1734724842291</updated>
+    </task>
+    <task id="LOCAL-00090" summary="implemented all the populate functions">
+      <option name="closed" value="true" />
+      <created>1734725133804</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1734725133804</updated>
+    </task>
+    <task id="LOCAL-00091" summary="implemented the execute window , need to make the relationship between select window and execute window">
+      <option name="closed" value="true" />
+      <created>1734727077696</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1734727077696</updated>
+    </task>
+    <task id="LOCAL-00092" summary="implemented the execute window , need to make the relationship between select window and execute window">
+      <option name="closed" value="true" />
+      <created>1734727087516</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1734727087516</updated>
+    </task>
+    <task id="LOCAL-00093" summary="implemented the relation between the 2 windows">
+      <option name="closed" value="true" />
+      <created>1734728779923</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1734728779923</updated>
+    </task>
+    <task id="LOCAL-00094" summary="implemented the runOneStep function">
+      <option name="closed" value="true" />
+      <created>1734729006156</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1734729006156</updated>
+    </task>
+    <task id="LOCAL-00095" summary="almost done">
+      <option name="closed" value="true" />
+      <created>1734729640420</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1734729640420</updated>
+    </task>
+    <task id="LOCAL-00096" summary="fixed the runOneStep function">
+      <option name="closed" value="true" />
+      <created>1734730131823</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1734730131823</updated>
+    </task>
+    <task id="LOCAL-00097" summary="almost done">
+      <option name="closed" value="true" />
+      <created>1734732831340</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1734732831340</updated>
+    </task>
+    <task id="LOCAL-00098" summary="need to fix the fork statement">
+      <option name="closed" value="true" />
+      <created>1734740700258</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1734740700258</updated>
+    </task>
+    <task id="LOCAL-00099" summary="implemented new functions in stack">
+      <option name="closed" value="true" />
+      <created>1734796987887</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1734796987887</updated>
+    </task>
+    <task id="LOCAL-00100" summary="changed all the execute functions in all statements to return null">
+      <option name="closed" value="true" />
+      <created>1734799041625</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1734799041625</updated>
+    </task>
+    <task id="LOCAL-00101" summary="changed all the execute functions in all statements to return null">
+      <option name="closed" value="true" />
+      <created>1734802159263</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1734802159267</updated>
+    </task>
+    <task id="LOCAL-00102" summary="almost done">
+      <option name="closed" value="true" />
+      <created>1734803765975</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1734803765975</updated>
+    </task>
+    <task id="LOCAL-00103" summary="fixed the symtable">
+      <option name="closed" value="true" />
+      <created>1734810205363</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1734810205363</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="A5" />
+    <MESSAGE value="finished A5" />
+    <MESSAGE value="found another error,trying to fix it" />
+    <MESSAGE value="syncronized the heap" />
+    <MESSAGE value="FINISHED A5" />
+    <MESSAGE value="started A6 , implemented the typecheck method for all expressions" />
+    <MESSAGE value="implemented the typeCheck method for all statements" />
+    <MESSAGE value="finished A6" />
+    <MESSAGE value="added javaFx module-info.java" />
+    <MESSAGE value="implemented the select window, need to implement functionalities" />
+    <MESSAGE value="deleted some implementations and started over" />
+    <MESSAGE value="implemented the ExecuteStatementWindow.fxml" />
+    <MESSAGE value="implement the get current program state" />
+    <MESSAGE value="added the ADT MyPair" />
+    <MESSAGE value="implement the getStack function in Stack ADT" />
+    <MESSAGE value="implemented all the populate functions" />
+    <MESSAGE value="implemented the execute window , need to make the relationship between select window and execute window" />
+    <MESSAGE value="implemented the relation between the 2 windows" />
+    <MESSAGE value="implemented the runOneStep function" />
+    <MESSAGE value="fixed the runOneStep function" />
+    <MESSAGE value="need to fix the fork statement" />
+    <MESSAGE value="implemented new functions in stack" />
+    <MESSAGE value="changed all the execute functions in all statements to return null" />
+    <MESSAGE value="almost done" />
+    <MESSAGE value="fixed the symtable" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the symtable" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="repository.Repository" memberName="programs" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
