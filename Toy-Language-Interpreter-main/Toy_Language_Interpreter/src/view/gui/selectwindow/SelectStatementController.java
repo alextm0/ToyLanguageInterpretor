@@ -353,6 +353,59 @@ public class SelectStatementController implements Initializable {
         );
 
         statements.add(statement13);
+
+      IStmt statement14 = new CompStmt(
+              new VariablesDeclarationStmt("v1", new RefType(new IntIType())), // Ref int v1;
+              new CompStmt(
+                      new VariablesDeclarationStmt("cnt", new IntIType()), // int cnt;
+                      new CompStmt(
+                              new HeapAllocationStatement(new ValueExpression(new IntIValue(1)), "v1"), // new(v1, 1);
+                              new CompStmt(
+                                      new CreateSemaphoreStmt("cnt", new HeapReadExpression(new VariableExpression("v1"))), // createSemaphore(cnt, rH(v1));
+                                      new CompStmt(
+                                              new ForkStatement( // First Fork
+                                                      new CompStmt(
+                                                              new AcquirePermitStmt("cnt"), // acquire(cnt);
+                                                              new CompStmt(
+                                                                      new HeapWriteStatement(new ArithmeticalExpression(new HeapReadExpression(new VariableExpression("v1")), ArithmeticalOperator.MULTIPLY, new ValueExpression(new IntIValue(10))), "v1"), // v1 = rH(v1) * 10;
+                                                                      new CompStmt(
+                                                                              new PrintStm(new HeapReadExpression(new VariableExpression("v1"))), // print(rH(v1));
+                                                                              new ReleasePermitStmt("cnt") // release(cnt);
+                                                                      )
+                                                              )
+                                                      )
+                                              ),
+                                              new CompStmt(
+                                                      new ForkStatement( // Second Fork
+                                                              new CompStmt(
+                                                                      new AcquirePermitStmt("cnt"), // acquire(cnt);
+                                                                      new CompStmt(
+                                                                              new HeapWriteStatement(new ArithmeticalExpression(new HeapReadExpression(new VariableExpression("v1")), ArithmeticalOperator.MULTIPLY, new ValueExpression(new IntIValue(10))), "v1"), // v1 = rH(v1) * 10;
+                                                                              new CompStmt(
+                                                                                      new HeapWriteStatement(new ArithmeticalExpression(new HeapReadExpression(new VariableExpression("v1")), ArithmeticalOperator.MULTIPLY, new ValueExpression(new IntIValue(2))), "v1"), // v1 = rH(v1) * 2;
+                                                                                      new CompStmt(
+                                                                                              new PrintStm(new HeapReadExpression(new VariableExpression("v1"))), // print(rH(v1));
+                                                                                              new ReleasePermitStmt("cnt") // release(cnt);
+                                                                                      )
+                                                                              )
+                                                                      )
+                                                              )
+                                                      ),
+                                                      new CompStmt( // Main Thread
+                                                              new AcquirePermitStmt("cnt"), // acquire(cnt);
+                                                              new CompStmt(
+                                                                      new PrintStm(new ArithmeticalExpression(new HeapReadExpression(new VariableExpression("v1")), ArithmeticalOperator.SUBTRACT, new ValueExpression(new IntIValue(1)))), // print(rH(v1) - 1);
+                                                                      new ReleasePermitStmt("cnt") // release(cnt);
+                                                              )
+                                                      )
+                                              )
+                                      )
+                              )
+                      )
+              )
+      );
+
+      statements.add(statement14);
     }
 
 
