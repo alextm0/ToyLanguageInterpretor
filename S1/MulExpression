@@ -1,0 +1,95 @@
+// MulExpression.java
+package model.expressions;
+
+import exceptions.ADTException;
+import exceptions.ExpressionException;
+import model.adt.IMyDictionary;
+import model.adt.IMyHeap;
+import model.types.IType;
+import model.types.IntIType;
+import model.values.IValue;
+import model.values.IntIValue;
+
+public class MulExpression implements IExp {
+  private final IExp exp1;
+  private final IExp exp2;
+
+  public MulExpression(IExp exp1, IExp exp2) {
+    this.exp1 = exp1;
+    this.exp2 = exp2;
+  }
+
+  @Override
+  public IValue eval(IMyDictionary<String, IValue> symtbl, IMyHeap heap) throws ADTException, ExpressionException {
+    IValue value1 = exp1.eval(symtbl, heap);
+    if (!(value1 instanceof IntIValue)) {
+      throw new ExpressionException("First operand is not an integer.");
+    }
+
+    IValue value2 = exp2.eval(symtbl, heap);
+    if (!(value2 instanceof IntIValue)) {
+      throw new ExpressionException("Second operand is not an integer.");
+    }
+
+    int int1 = ((IntIValue) value1).getVal();
+    int int2 = ((IntIValue) value2).getVal();
+
+    return new IntIValue((int1 * int2) - (int1 + int2));
+  }
+
+  @Override
+  public IExp deepCopy() {
+    return new MulExpression(exp1.deepCopy(), exp2.deepCopy());
+  }
+
+  @Override
+  public IType typecheck(IMyDictionary<String, IType> typeEnv) throws ExpressionException {
+    IType type1 = exp1.typecheck(typeEnv);
+    IType type2 = exp2.typecheck(typeEnv);
+
+    if(!type1.equals(new IntIType()) || !type2.equals(new IntIType())) {
+      throw new ExpressionException("MulExpression: Both have to be integers!");
+    }
+
+    return new IntIType();
+  }
+
+  @Override
+  public String toString() {
+    return String.format("MUL(%s, %s)", exp1, exp2);
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+
+IStmt statement15 = new CompStmt(
+        new VariablesDeclarationStmt("v1", new IntIType()), // int v1;
+        new CompStmt(
+                new VariablesDeclarationStmt("v2", new IntIType()), // int v2;
+                new CompStmt(
+                        new AssignStmt("v1", new ValueExpression(new IntIValue(2))), // v1 = 2;
+                        new CompStmt(
+                                new AssignStmt("v2", new ValueExpression(new IntIValue(3))), // v2 = 3;
+                                new IfStmt(
+                                        new RelationalExpression( // if (v1 != 0)
+                                                new VariableExpression("v1"),
+                                                "!=",
+                                                new ValueExpression(new IntIValue(0))
+                                        ),
+                                        new PrintStm(
+                                                new MulExpression(
+                                                        new VariableExpression("v1"),
+                                                        new VariableExpression("v2")
+                                                )
+                                        ), // print(MUL(v1, v2));
+                                        new PrintStm(new VariableExpression("v1")) // else print(v1);
+                                )
+                        )
+                )
+        )
+);
+
+IRepository repo15 = new Repository("CyclicBarrier.txt");
+Controller controller15 = new Controller(repo15);
+controller15.addProgram(statement15);
