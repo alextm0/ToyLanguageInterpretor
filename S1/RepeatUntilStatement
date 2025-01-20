@@ -1,0 +1,134 @@
+// RepeatUntilStatement
+package model.statements;
+
+import exceptions.StatementException;
+import model.adt.IMyDictionary;
+import model.expressions.IExp;
+import model.expressions.NegationExpression;
+import model.states.PrgState;
+import model.types.BoolIType;
+import model.types.IType;
+
+public class RepeatUntilStatement implements IStmt {
+  private final IStmt stmt;
+  private final IExp condition;
+
+  public RepeatUntilStatement(IStmt stmt, IExp condition) {
+    this.stmt = stmt;
+    this.condition = condition;
+  }
+
+  @Override
+  public PrgState execute(PrgState state) throws StatementException {
+    // Transform RepeatUntil into stmt; while (!condition) stmt
+    IStmt transformedStmt = new CompStmt(
+            stmt,
+            new WhileStatement(
+                    new NegationExpression(condition), // while (!condition)
+                    stmt
+            )
+    );
+    state.getExeStack().push(transformedStmt);
+    return null;
+  }
+
+  @Override
+  public IMyDictionary<String, IType> typeCheck(IMyDictionary<String, IType> typeEnv) throws StatementException {
+    stmt.typeCheck(typeEnv);
+    if (!condition.typecheck(typeEnv).equals(new BoolIType())) {
+      throw new StatementException("Condition in RepeatUntil must be of type bool.");
+    }
+    return typeEnv;
+  }
+
+  @Override
+  public IStmt deepCopy() {
+    return new RepeatUntilStatement(stmt.deepCopy(), condition.deepCopy());
+  }
+
+  @Override
+  public String toString() {
+    return String.format("repeat(%s) until(%s)", stmt, condition);
+  }
+}
+
+// -----------------------------------------------------
+// NegationExpression
+package model.expressions;
+
+import exceptions.ExpressionException;
+import model.adt.IMyDictionary;
+import model.adt.IMyHeap;
+import model.types.BoolIType;
+import model.types.IType;
+import model.values.BoolValue;
+import model.values.IValue;
+
+public class NegationExpression implements IExp {
+  private final IExp expression;
+
+  public NegationExpression(IExp expression) {
+    this.expression = expression;
+  }
+
+  @Override
+  public IValue eval(IMyDictionary<String, IValue> symTable, IMyHeap heap) throws ExpressionException {
+    IValue value = expression.eval(symTable, heap);
+    if (!(value instanceof BoolValue)) {
+      throw new ExpressionException("NegationExpression: Expression must evaluate to a boolean.");
+    }
+    BoolValue boolValue = (BoolValue) value;
+    return new BoolValue(!boolValue.getVal());
+  }
+
+  @Override
+  public IType typecheck(IMyDictionary<String, IType> typeEnv) throws ExpressionException {
+    IType type = expression.typecheck(typeEnv);
+    if (!type.equals(new BoolIType())) {
+      throw new ExpressionException("NegationExpression: Expression must be of type bool.");
+    }
+    return new BoolIType();
+  }
+
+  @Override
+  public IExp deepCopy() {
+    return new NegationExpression(expression.deepCopy());
+  }
+
+  @Override
+  public String toString() {
+    return String.format("!(%s)", expression);
+  }
+}
+
+
+// -----------------------------------------------------
+
+IStmt simpleRepeatUntilProgram = new CompStmt(
+        new VariablesDeclarationStmt("v", new IntIType()), // int v;
+        new CompStmt(
+                new AssignStmt("v", new ValueExpression(new IntIValue(0))), // v = 0;
+                new CompStmt(
+                        new RepeatUntilStatement(
+                                new AssignStmt(
+                                        "v",
+                                        new ArithmeticalExpression(
+                                                new VariableExpression("v"),
+                                                ArithmeticalOperator.ADD,
+                                                new ValueExpression(new IntIValue(1))
+                                        )
+                                ), // v = v + 1;
+                                new RelationalExpression(
+                                        new VariableExpression("v"),
+                                        "==",
+                                        new ValueExpression(new IntIValue(3))
+                                ) // until (v == 3)
+                        ),
+                        new PrintStm(new VariableExpression("v")) // print(v);
+                )
+        )
+);
+
+IRepository repo15 = new Repository("CyclicBarrier.txt");
+Controller controller15 = new Controller(repo15);
+controller15.addProgram(simpleRepeatUntilProgram);
