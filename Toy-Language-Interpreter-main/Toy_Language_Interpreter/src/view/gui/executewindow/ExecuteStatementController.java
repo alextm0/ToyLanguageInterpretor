@@ -54,6 +54,15 @@ public class ExecuteStatementController {
     @FXML
     private Label identifiersLabel;
 
+    // Create TableView to represent LockTable
+    @FXML
+    private TableView<MyPair<Integer, Integer>> lockTableView;
+    @FXML
+    private TableColumn<MyPair<Integer, Integer>, Integer> lockLocationColumn;
+    @FXML
+    private TableColumn<MyPair<Integer, Integer>, Integer> lockValueColumn;
+
+
     @FXML
     private TableView<MyPair<String,IValue>> SymTableView;
     @FXML
@@ -70,6 +79,31 @@ public class ExecuteStatementController {
 
     @FXML
     private Button runOneStepButton;
+
+    private void populateLockTable() {
+        PrgState currentProgramState = getCurrentProgramState();
+        if (currentProgramState == null) {
+            System.out.println("No program state selected.");
+            return;
+        }
+
+        // Extract data from the lock table
+        MyILockTable lockTable = currentProgramState.getLockTable();
+        ObservableList<MyPair<Integer, Integer>> lockTableData = FXCollections.observableArrayList(
+                lockTable.getContent().entrySet().stream()
+                        .map(entry -> new MyPair<>(entry.getKey(), entry.getValue()))
+                        .toList()
+        );
+
+        // Bind data to columns
+        lockLocationColumn.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getFirst()).asObject());
+        lockValueColumn.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getSecond()).asObject());
+
+        // Update the TableView
+        lockTableView.setItems(lockTableData);
+        lockTableView.refresh();
+    }
+
 
 
     @FXML
@@ -95,6 +129,7 @@ public class ExecuteStatementController {
         populateFileTable();
         populateIdentifiers();
         populateNumberProgramStates();
+        populateLockTable();
     }
 
     @FXML

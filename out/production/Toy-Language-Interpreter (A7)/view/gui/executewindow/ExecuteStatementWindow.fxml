@@ -34,12 +34,14 @@
             <Font name="Cambria Italic" size="18.0" />
          </font>
       </Label>
+
       <ListView fx:id="fileTableListView" layoutX="416.0" layoutY="52.0" prefHeight="162.0" prefWidth="182.0" />
       <Label fx:id="fileTableLabel" layoutX="479.0" layoutY="23.0" prefHeight="26.0" prefWidth="74.0" text="FileTable">
          <font>
             <Font name="Cambria Italic" size="18.0" />
          </font>
       </Label>
+
       <ListView fx:id="identifiersListView" layoutX="14.0" layoutY="243.0" prefHeight="170.0" prefWidth="200.0"  onMouseClicked="#changeProgramState"/>
       <Label layoutX="66.0" layoutY="217.0" prefHeight="22.0" prefWidth="96.0" text="Identifiers">
          <font>
@@ -63,10 +65,23 @@
             <Font name="Cambria Italic" size="18.0" />
          </font>
       </Label>
+      <TableView fx:id="lockTableView" layoutX="214.0" layoutY="470.0" prefHeight="140.0" prefWidth="374.0">
+         <columns>
+            <TableColumn fx:id="lockLocationColumn" text="Location" prefWidth="187.0"/>
+            <TableColumn fx:id="lockValueColumn" text="Value" prefWidth="187.0"/>
+         </columns>
+      </TableView>
+      <Label layoutX="332.0" layoutY="450.0" text="LockTable">
+         <font>
+            <Font name="Cambria Italic" size="18.0"/>
+         </font>
+      </Label>
+
       <Button layoutX="264.0" layoutY="418.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="106.0" text="Run one step" onAction="#handleRunOneStep">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font>
       </Button>
    </children>
+   <Label text="LockTable"/>
 </AnchorPane>

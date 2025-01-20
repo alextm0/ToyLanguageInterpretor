@@ -19,7 +19,8 @@ public class PrgState {
     protected IStmt originalProgram;
     private final IMyDictionary<StringValue, BufferedReader> fileTable;
     private IMyHeap heap;
-    private MyISemaphore semaphoreTable;
+
+    private MyILockTable lockTable;
 
     //CONSTRUCTOR
     public PrgState(IStmt statement)
@@ -32,11 +33,11 @@ public class PrgState {
         this.originalProgram = statement.deepCopy();
         exeStack.push(statement);
         this.id = getNewId();
-        this.semaphoreTable = new MySemaphore();
+        this.lockTable = new MyLockTable();
     }
 
     //CONSTRUCTOR
-    public PrgState(IMyStack<IStmt> e , IMyDictionary<String,IValue> dictionary , IMyList<String> list , IStmt InitialStatement , IMyDictionary<StringValue , BufferedReader> fileTable , IMyHeap heap, MyISemaphore semaphore)
+    public PrgState(IMyStack<IStmt> e , IMyDictionary<String,IValue> dictionary , IMyList<String> list , IStmt InitialStatement , IMyDictionary<StringValue , BufferedReader> fileTable , IMyHeap heap, MyILockTable lockTable)
     {
         this.exeStack = e;
         this.symTable = dictionary;
@@ -46,7 +47,7 @@ public class PrgState {
         this.originalProgram = InitialStatement.deepCopy();
         exeStack.push(InitialStatement);
         this.id = getNewId();
-        this.semaphoreTable = semaphore;
+        this.lockTable = lockTable;
     }
 
     public IMyDictionary<StringValue,BufferedReader> getFileTable()
@@ -140,11 +141,11 @@ public class PrgState {
         return this.id;
     }
 
-  public MyISemaphore getSemaphoreTable() {
-    return semaphoreTable;
+  public MyILockTable getLockTable() {
+    return lockTable;
   }
 
-  public void setSemaphoreTable(MyISemaphore semaphoreTable) {
-    this.semaphoreTable = semaphoreTable;
+  public void setLockTable(MyILockTable lockTable) {
+    this.lockTable = lockTable;
   }
 }
